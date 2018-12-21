@@ -1,0 +1,13 @@
+[Unit]
+Description=MicroProfile asm logger
+
+[Service]
+PIDFile=/tmp/microprofile-asm-server_pid
+User=pi
+Group=pi
+Restart=always
+KillSignal=SIGQUIT
+WorkingDirectory=/home/pi/git/microprofile-asm-server/
+ExecStart=/home/pi/git/microprofile-asm-server/srv.js
+[Install]
+WantedBy=multi-user.target
